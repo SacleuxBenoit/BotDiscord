@@ -15,6 +15,6 @@ bot.on('guildMemberAdd', function(member){
 })
 
 bot.on('message', function(message){
-        Google.parse(message)
+    let commandUsed = Ping.parse(message) || Google.parse(message)
 })
 bot.login("Njc2NDg5ODM5MDQxODM5MTcx.XkGdPg.SsyOeVTSMOVSxpW55E5LskW-QBk")
