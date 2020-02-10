@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const Token = require('./tokenBot');
 const bot = new Discord.Client()
 
 bot.on('message', function(message){
