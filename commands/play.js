@@ -9,10 +9,14 @@ module.exports = class Play extends Command{
     let voiceChannel = message.guild.channels
         .filter(function (channel){return channel.type=='voice'})
         .first()
+        let args = message.content.split(' ')
         voiceChannel
         .join()
         .then(function(connection){
-            connection.playFile('mettre le lien du fichier audio ici')
+            let stream = YoutubStream(args[1])
+            connection.playStream(stream).on('end',function(){
+                connection.disconnect()
+            })
         })
     }
 }
