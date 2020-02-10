@@ -1,6 +1,10 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client()
 
+bot.on('ready', function(){
+    bot.user.setAvatar()
+})
+
 bot.on('message', function(message){
     if (message.content === '!ping'){
         message.channel.send('pong')
