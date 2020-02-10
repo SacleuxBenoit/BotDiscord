@@ -3,6 +3,11 @@ const bot = new Discord.Client()
 
 bot.on('ready', function(){
  //   bot.user.setAvatar('path avatar ici').catch(console.error)
+    bot.user.setActivity('its a test').catch(console.error)
+})
+
+bot.on('guildMemberAdd', function(member){
+
 })
 
 bot.on('message', function(message){
