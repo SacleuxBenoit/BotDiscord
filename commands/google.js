@@ -4,7 +4,7 @@ module.exports = class Google{
         return message.content.startsWith('!google')
     }
     static action (message){
-        args = message.content.split(' ')
+       let args = message.content.split(' ')
         args.shift()
         message.reply('https://www.google.fr' + args.join('%20'))
     }
