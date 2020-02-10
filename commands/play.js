@@ -1,4 +1,5 @@
-const Command = require('./command')
+const Command = require('./command');
+const YoutubStream = require('youtube-audio-stream')
 module.exports = class Play extends Command{
 
     static match(message){
@@ -11,7 +12,7 @@ module.exports = class Play extends Command{
         voiceChannel
         .join()
         .then(function(connection){
-            connection.playFile('mettre le lien du fichier audio ic')
+            connection.playFile('mettre le lien du fichier audio ici')
         })
     }
 }
