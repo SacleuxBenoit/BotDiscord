@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client()
+const Google = require('./commands/Google');
 
 bot.on('ready', function(){
  //   bot.user.setAvatar('path avatar ici').catch(console.error)
