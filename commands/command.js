@@ -10,7 +10,7 @@ module.exports = class command{
     }
 
     static match(message){
-        return message.content.startsWith('!google')
+        return false
     }
     static action (message){
        let args = message.content.split(' ')
