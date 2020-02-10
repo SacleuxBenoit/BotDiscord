@@ -1,6 +1,5 @@
 const Command = require('./command');
 const YoutubStream = require('ytdl-core')
-const ffmpeg = require("ffmpeg")
 module.exports = class Play extends Command{
 
     static match(message){
