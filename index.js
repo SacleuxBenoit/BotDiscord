@@ -1,11 +1,11 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client()
 
-bot.on('ready', function(){
+/*bot.on('ready', function(){
     bot.user.setAvatar('path avatar ici')
     .then(() => console.log('Avatar mis avec succès !'))
     .catch(console.error)
-})
+})*/
 
 bot.on('message', function(message){
     if (message.content === '!ping'){
