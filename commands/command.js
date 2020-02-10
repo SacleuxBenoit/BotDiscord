@@ -1,5 +1,12 @@
 module.exports = class command{
 
+    static parse (message){
+        if(this.match(message)){
+            this.action(message)
+            return true;
+        }
+    }
+
     static match(message){
         return message.content.startsWith('!google')
     }
