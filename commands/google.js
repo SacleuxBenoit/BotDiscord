@@ -1,9 +1,9 @@
-module.exports = Class Google{
+module.exports = class Google{
 
-    match(message){
+    static match(message){
         return message.content.startsWith('!google')
     }
-    action (message){
+    static action (message){
         args = message.content.split(' ')
         args.shift()
         message.reply('https://www.google.fr' + args.join('%20'))
