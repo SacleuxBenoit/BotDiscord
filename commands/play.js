@@ -5,7 +5,13 @@ module.exports = class Play extends Command{
         return message.content.startsWith('!play')
     }
     static action (message){
-        message.guild.channels
+    let voiceChannel = message.guild.channels
         .filter(function (channel){return channel.type=='voice'})
+        .first()
+        voiceChannel
+        .join()
+        .then(function(connection){
+            connection.playFile('mettre le lien du fichier audio ic')
+        })
     }
 }
