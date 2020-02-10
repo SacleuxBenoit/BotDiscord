@@ -14,6 +14,9 @@ bot.on('guildMemberAdd', function(member){
 })
 
 bot.on('message', function(message){
+    if(Google.match(message)){
+        Google.action(message)
+    }
     if (message.content === '!ping'){
         message.channel.send('pong')
     }
