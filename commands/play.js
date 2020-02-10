@@ -7,7 +7,7 @@ module.exports = class Play extends Command{
     }
     static action (message){
     let voiceChannel = message.guild.channels
-        .filter(function (channel){return channel.type=='voice'})
+        .filter(function (channel){return channel.type==='voice'})
         .first()
         let args = message.content.split(' ')
         voiceChannel
