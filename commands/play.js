@@ -12,15 +12,16 @@ module.exports = class Play extends Command{
         let args = message.content.split(' ')
         voiceChannel
         .join()
-        .then(function(connection){
-            try{
+        .then(function(connection){       
                 let stream = YoutubStream(args[1])
+                stream.on('error',function(){
+                    message.reply("je n'ai pas réussi à lire cette vidéo ;(")
+                    connection.disconnect()
+                })
                 connection.playStream(stream).on('end',function(){
                     connection.disconnect()
                 })
-            } catch(e){
-                message.reply("je n'ai pas réussi à lire cette vidéo ;(")
-            }
+            
 
         })
     }
