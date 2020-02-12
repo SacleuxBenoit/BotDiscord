@@ -4,6 +4,7 @@ const Google = require('./commands/google');
 const Ping = require('./commands/ping');
 const Play = require('./commands/play');
 const Hello = require('./commands/Hello');
+const everyCommand = require('./commands/everyCommand');
 
 
 bot.on('ready', function(){
