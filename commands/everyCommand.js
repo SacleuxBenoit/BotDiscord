@@ -6,6 +6,6 @@ module.exports = class everyCommand extends Command{
         return message.content.startsWith('!commande')
     }
     static action (message){
-        message.reply('Les commandes dispo sont : !ping, !hello !commande')
+        message.reply('Les commandes dispo sont : !ping, !hello !commande .Si jamais vous avez des idées en tête merci de contacer @tøtør')
     }
 }
