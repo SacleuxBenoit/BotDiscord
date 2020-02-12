@@ -20,6 +20,7 @@ bot.on('guildMemberAdd', function(member){
 bot.on('message', function(message){
     let commandUsed = Ping.parse(message) ||
                       Play.parse(message) ||
+                      Hello.parse(message) ||
                        Google.parse(message)
 })
 bot.login("Njc2NDg5ODM5MDQxODM5MTcx.XkGdPg.SsyOeVTSMOVSxpW55E5LskW-QBk")
