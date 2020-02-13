@@ -26,4 +26,4 @@ bot.on('message', function(message){
 
                        Google.parse(message)
 })
-bot.login("Njc2NDg5ODM5MDQxODM5MTcx.XkGdPg.SsyOeVTSMOVSxpW55E5LskW-QBk")
+bot.login(process.env.Token)
