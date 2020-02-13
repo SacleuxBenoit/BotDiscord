@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const config = require('dotenv')
 const bot = new Discord.Client()
 const Google = require('./commands/google');
 const Ping = require('./commands/ping');
