@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const config = require('dotenv')
+const {config} = require("dotenv");
 const bot = new Discord.Client()
 const Google = require('./commands/google');
 const Ping = require('./commands/ping');
@@ -7,6 +7,9 @@ const Play = require('./commands/play');
 const Hello = require('./commands/Hello');
 const everyCommand = require('./commands/everyCommand');
 
+config({
+  path: __dirname + "/.env"
+});
 
 bot.on('ready', function(){
  //   bot.user.setAvatar('path avatar ici').catch(console.error)
@@ -27,4 +30,4 @@ bot.on('message', function(message){
 
                        Google.parse(message)
 })
-bot.login(process.env.Token)
+bot.login(process.env.Token);
